@@ -4,7 +4,5 @@
 
   angular
     .module('newFolder')
-    .constant('malarkey', malarkey)
-    .constant('moment', moment);
 
 })();
