@@ -5,11 +5,11 @@
 angular.module('newFolder')
   .factory('PostFactory', PostFactory);
 
-PostFactory.$inject = ['$http'];
+PostFactory.$inject = ['$http', '$log'];
 
-function PostFactory($http) {
+function PostFactory($http, $log) {
 
-  const api = 'http://146.185.138.86:8080/api/v1'
+  var api = 'http://146.185.138.86:8080/api/v1'
 
   var postFactoryFunctions = {}
 
@@ -19,7 +19,7 @@ function PostFactory($http) {
         return res.data;
       })
       .catch(function(err) {
-        console.log('getAllPosts() failed: ' + err.data);
+        $log.info('getAllPosts() failed: ' + err.data);
       });
   }
 

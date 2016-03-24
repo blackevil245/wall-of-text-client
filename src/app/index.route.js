@@ -18,7 +18,7 @@
         url: '/editor',
         templateUrl: 'app/components/editor/editor.html',
         controller: 'EditorController',
-        controller: 'editor'
+        controllerAs: 'editor'
       });
 
     $urlRouterProvider.otherwise('/');

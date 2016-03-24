@@ -5,9 +5,9 @@ angular
   .module('newFolder')
   .controller('BrowsePageController', BrowsePageController);
 
-BrowsePageController.$inject = ['PostFactory'];
+BrowsePageController.$inject = ['PostFactory', '$log'];
 
-function BrowsePageController(PostFactory) {
+function BrowsePageController(PostFactory, $log) {
   var vm = this;
   vm.posts = [];
 
@@ -15,15 +15,15 @@ function BrowsePageController(PostFactory) {
 
   function activate() {
     return getPosts().then(function() {
-      console.log('BrowsePageController activated')
+      $log.info('BrowsePageController activated');
     })
-  };
+  }
 
   function getPosts() {
     return PostFactory.getAllPosts()
       .then(function(data) {
         vm.posts = data;
-        console.log(vm.posts)
+        $log.info(vm.posts)
         return vm.posts;
       })
   }
