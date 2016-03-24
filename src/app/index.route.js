@@ -10,9 +10,9 @@
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'app/main/main.html',
-        controller: 'MainController',
-        controllerAs: 'main'
+        templateUrl: 'app/components/browse-page/browse-page.html',
+        controller: 'BrowsePageController',
+        controllerAs: 'browsepage'
       });
 
     $urlRouterProvider.otherwise('/');

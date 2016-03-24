@@ -9,7 +9,19 @@
 $sidebar-width: 240px;
 $sidebar-color: #fff;
 
+$main-width: calc(100vw - #{$sidebar-width});
+
 /* Do not remove the comments below. It's the markers used by gulp-inject to inject
    all your sass files automatically */
 // injector
 // endinjector
+
+main {
+  position: absolute;
+  float: right;
+  width: $main-width;
+  right: 0;
+  top: 0;
+  min-height: 600px;
+  padding-top: 60px;
+}

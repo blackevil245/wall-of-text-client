@@ -6,7 +6,7 @@ function actionButton() {
 		templateUrl: 'app/components/actionButton/actionButton.html',
 		restrict: 'E',
 		controller: 'ActionButtonController',
-		controllerAs: actionButton
+		controllerAs: 'actionbutton'
 	}
 
 	return directive;
