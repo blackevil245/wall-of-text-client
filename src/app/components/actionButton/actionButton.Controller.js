@@ -1,6 +1,6 @@
 angular.module('newFolder')
-	.controller('actionButtonController', actionButtonController);
+	.controller('ActionButtonController', ActionButtonController);
 
-function actionButtonController() {
+function ActionButtonController() {
 	var vm = this;
 }

@@ -2,10 +2,10 @@ angular.module('newFolder')
 	.directive('actionButton', actionButton);
 
 function actionButton() {
-	directive = {
+	var directive = {
 		templateUrl: 'app/components/actionButton/actionButton.html',
 		restrict: 'E',
-		controller: actionButtonController,
+		controller: 'ActionButtonController',
 		controllerAs: actionButton
 	}
 
