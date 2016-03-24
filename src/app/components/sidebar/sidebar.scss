@@ -1,86 +1,79 @@
 nav {
-	width: $sidebar-width;
-	min-height: 100vh;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background-color: $sidebar-color;
-	color: black;
-	overflow: hidden;
-	z-index: 999;
-	&:hover {
-		overflow-y: auto;
-	}
-
-	a, p {
-		color: black;
-		width: 100%;
-		display: block;
-		text-align: center;
-	}
+    width: $sidebar-width;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $sidebar-color;
+    color: black;
+    overflow: hidden;
+    z-index: 999;
+    &:hover {
+        overflow-y: auto;
+    }
+    a,
+    p {
+        color: black;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
 }
 
 #logo-container {
-	width: 100%;
-	min-height: 15%;
-	margin-bottom: 50px;
-	position: relative;
-
-	#logo {
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
-	}
+    width: 100%;
+    min-height: 15%;
+    margin-bottom: 50px;
+    position: relative;
+    #logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 #search {
-	margin-bottom: 50px;
-
-	.search-wrapper {
-		position: relative;
-	}
-
-	input {
-		padding-left: 10px;
-	}
-
-	button {
-		position: absolute;
-		right: 10px;
-		top: 5px;
-		background-color: white;
-		border: 0;
-		height: 0;
-		i {
-			font-size: 24px;
-		}
-	}
+    .search-wrapper {
+        position: relative;
+        width: 80%;
+        margin: 0 auto 50px auto;
+    }
+    input {
+        padding-left: 10px;
+    }
+    button {
+        position: absolute;
+        right: -10px;
+        top: 5px;
+        background-color: white;
+        border: 0;
+        height: 0;
+        i {
+            font-size: 24px;
+        }
+    }
 }
 
 #control-panel {
-	width: 100%;
-	min-height: 300px;
-
-	li {
-		width: 100%;
-	}
-
-	a {
-		color: black;
-		width: 100%;
-		text-align: center;
-	}
-
-	i {
-		display: inline;
-	}
+    width: 100%;
+    min-height: 300px;
+    li {
+        width: 100%;
+    }
+    a {
+        color: black;
+        width: 100%;
+        text-align: center;
+    }
+    i {
+        display: inline;
+    }
 }
 
 #tag-tablet {
-	width: 100%;
-
-	p {
-		text-align: center;
-	}
+    width: 100%;
+    p {
+        text-align: center;
+    }
 }
