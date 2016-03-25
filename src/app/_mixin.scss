@@ -1,0 +1,33 @@
+$width-phone : 600px;
+$width-tablet : 992px;
+
+/// Mixin for media queries
+@mixin phone {
+    @media (max-width: #{$width-phone}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$width-tablet}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$width-tablet + 1px}) {
+        @content;
+    }
+}
+
+@mixin device-portrait {
+    @media screen and (orientation: portrait) {
+        @content;
+    }
+}
+
+@mixin device-landscape {
+    @media screen and (orientation: landscape) and (max-width: #{$width-desktop}) {
+        @content;
+    }
+}

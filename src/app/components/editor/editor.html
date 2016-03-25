@@ -1,3 +1,30 @@
-<section id="editor">
-  
+<section id="editor-page" class="container">
+    <h4>Create New Post</h4>
+    <div class="row">
+        <ul class="tabs">
+            <li class="tab col s6 active"><a href="#editor">Editor</a></li>
+            <li class="tab col s6"><a href="#preview">Preview</a></li>
+        </ul>
+        <article id="editor" class="card col s12">
+            <div class="card-content row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="text" id="create-post-title" class="validate" ng-model="editor.title">
+                            <label for="create-post-title">Title</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <textarea type="text" id="create-post-text-area" class="materialize-textarea" ng-model="editor.content"></textarea>
+                            <label for="create-post-text-area">Content</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card-action">
+                <button class="btn" ng-click="editor.submitPost()">Submit</button>
+                <button class="btn red">Reset</button>
+                <span class="badge orange white-text">Markdown</span>
+            </div>
+        </article>
+    </div>
 </section>

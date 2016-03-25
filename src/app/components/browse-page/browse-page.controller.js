@@ -15,7 +15,7 @@ function BrowsePageController(PostFactory, $log) {
 
   function activate() {
     return getPosts().then(function() {
-      $log.info('BrowsePageController activated');
+      $log.log('BrowsePageController activated');
     })
   }
 
@@ -23,7 +23,7 @@ function BrowsePageController(PostFactory, $log) {
     return PostFactory.getAllPosts()
       .then(function(data) {
         vm.posts = data;
-        $log.info(vm.posts)
+        $log.log(vm.posts)
         return vm.posts;
       })
   }
