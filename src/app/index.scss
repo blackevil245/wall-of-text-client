@@ -33,3 +33,8 @@ main {
   max-width: none;
   width: 90%;
 }
+
+.row:hover .masonry-brick:not[hover] {
+  opacity: 0.4;
+}
+

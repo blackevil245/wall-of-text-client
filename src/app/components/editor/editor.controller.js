@@ -2,9 +2,9 @@ angular
     .module('newFolder')
     .controller('EditorController', EditorController);
 
-EditorController.$inject = ['PostFactory', '$log', 'MarkdownParser'];
+EditorController.$inject = ['PostFactory', '$log'];
 
-function EditorController(PostFactory, $log, MarkdownParser) {
+function EditorController(PostFactory, $log) {
     var vm = this;
     vm.title = '';
     vm.content = '';
@@ -27,7 +27,7 @@ function EditorController(PostFactory, $log, MarkdownParser) {
 
         PostFactory.sendPost(post)
             .then(function(success) {
-                Materialize.toast('Post submit successfully', 4000)
+                // Materialize.toast('Post submit successfully', 4000)
                 $log.log(success.data);
             }, function(err) {
                 $log.log(err.data);
