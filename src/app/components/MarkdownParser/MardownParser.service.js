@@ -5,6 +5,7 @@ MarkdownParser.$inject = ['marked'];
 
 function MarkdownParser(marked) {
 	var markdownParser = {};
+	
 	/**
 	 * Parse input text to HTML
 	 */
