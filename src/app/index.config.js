@@ -1,14 +1,13 @@
 (function() {
-  'use strict';
 
-  angular
-    .module('newFolder')
-    .config(config);
+    angular
+        .module('newFolder')
+        .config(config);
 
-  /** @ngInject */
-  function config($logProvider) {
-    // Enable log
-    $logProvider.debugEnabled(true);
-  }
+    /** @ngInject */
+    function config($logProvider) {
+        // Enable log
+        $logProvider.debugEnabled(true);
+    }
 
 })();

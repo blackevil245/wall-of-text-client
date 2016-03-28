@@ -1,20 +1,16 @@
 <section id="editor-page" class="container">
     <h4>Create New Post</h4>
     <div class="row">
-        <ul class="tabs">
-            <li class="tab col s6 active"><a href="#editor">Editor</a></li>
-            <li class="tab col s6"><a href="#preview">Preview</a></li>
-        </ul>
-        <article id="editor" class="card col s12">
+        <article id="editor" class="card col s12 m6">
             <div class="card-content row">
                 <form class="col s12">
                     <div class="row">
                         <div class="input-field col s12">
-                            <input type="text" id="create-post-title" class="validate" ng-model="editor.title">
+                            <input type="text" id="create-post-title" ng-model="editor.title" required>
                             <label for="create-post-title">Title</label>
                         </div>
                         <div class="input-field col s12">
-                            <textarea type="text" id="create-post-text-area" class="materialize-textarea" ng-model="editor.content"></textarea>
+                            <textarea type="text" id="create-post-text-area" class="materialize-textarea" ng-model="editor.content" required></textarea>
                             <label for="create-post-text-area">Content</label>
                         </div>
                     </div>
@@ -22,8 +18,18 @@
             </div>
             <div class="card-action">
                 <button class="btn" ng-click="editor.submitPost()">Submit</button>
-                <button class="btn red">Reset</button>
+                <button class="btn red" ng-click="editor.resetContent()">Reset</button>
                 <span class="badge orange white-text">Markdown</span>
+            </div>
+        </article>
+        <article id="preview-content" class="card col s12 m6">
+            <div class="card-content">
+                <div marked="editor.title">
+                </div>
+            </div>
+            <div class="card-action">
+                <div marked="editor.content">
+                </div>
             </div>
         </article>
     </div>

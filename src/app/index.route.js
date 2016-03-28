@@ -19,12 +19,6 @@
                 templateUrl: 'app/components/editor/editor.html',
                 controller: 'EditorController',
                 controllerAs: 'editor'
-            })
-            .state('preview', {
-                url: '/preview',
-                templateUrl: 'app/components/preview/preview.html',
-                controller: 'PreviewController',
-                controllerAs: 'preview'
             });
 
         $urlRouterProvider.otherwise('/');
